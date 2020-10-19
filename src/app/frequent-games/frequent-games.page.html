@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Juegos frecuentes</ion-title>
+    <ion-label>Número de préstamos por juego</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let game of games">
+      <ion-label>{{game.prestamos}} - {{game.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

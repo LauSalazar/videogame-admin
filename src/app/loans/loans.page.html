@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Préstamos del dia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-4>
+        <ion-label >Cliente</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Juego</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Fecha inicial préstamo</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Fecha final préstamo</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Precio</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;" *ngFor="let loan of loans">
+      <ion-col col-4>
+      <ion-label >{{loan.customer}}</ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label >{{loan.name}}</ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label >{{loan.start_date}}</ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label >{{loan.end_date}}</ion-label>
+    </ion-col>
+      <ion-col col-4>
+        <ion-label >{{loan.price}}</ion-label>
+    </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+  
+  <ion-button (click)="add()">Crear préstamo</ion-button>
+
+</ion-content>

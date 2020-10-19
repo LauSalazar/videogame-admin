@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Juego</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #form="ngForm" (ngSubmit)="save(form)">
+    <ion-item>
+      <ion-label>Titulo</ion-label>
+      <ion-input type="text" required [(ngModel)]="game.title" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" required [(ngModel)]="game.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Año</ion-label>
+      <ion-input type="text" [(ngModel)]="game.year" name="year"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Protagonista</ion-label>
+      <ion-input type="text" [(ngModel)]="game.protagonist" name="protagonist"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Director</ion-label>
+      <ion-input type="text" [(ngModel)]="game.director" name="director"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Productor</ion-label>
+      <ion-input type="text" [(ngModel)]="game.productor" name="productor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tecnologia</ion-label>
+      <ion-input type="text" [(ngModel)]="game.technology" name="technology"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Precio</ion-label>
+      <ion-input type="text" [(ngModel)]="game.price" name="price"></ion-input>
+    </ion-item>
+    <ion-button ion-button type="submit" block>Save</ion-button>
+  </form>
+
+</ion-content>

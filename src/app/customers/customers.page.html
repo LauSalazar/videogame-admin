@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-4>
+        <ion-label >Identificacion</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Nombre</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Fecha de nacimiento</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;" *ngFor="let cus of customers">
+      <ion-col col-4>
+      <ion-label >{{cus.identification}}</ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label >{{cus.name}}</ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label >{{cus.birthDate}}</ion-label>
+    </ion-col>
+  </ion-row>
+  
+  </ion-grid>
+  
+  <ion-button (click)="add()">Adicionar cliente</ion-button>
+
+</ion-content>

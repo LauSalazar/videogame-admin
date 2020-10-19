@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nuevo préstamos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #form="ngForm" (ngSubmit)="save(form)">
+    <ion-item>
+      <ion-label>Cliente</ion-label>
+      <ion-select placeholder="Seleccione cliente" required [(ngModel)]="loan.idCustomer" name="idCustomer">
+        <ion-select-option *ngFor="let cus of customers" [value]="cus.id">{{cus.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Juego</ion-label>
+      <ion-select placeholder="Seleccione juego" required [(ngModel)]="loan.idVideogame" name="idVideogame">
+        <ion-select-option *ngFor="let game of games" [value]="game.id">{{game.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha entrega</ion-label>
+      <ion-input type="date" required [(ngModel)]="loan.endDate" name="year"></ion-input>
+    </ion-item>
+    <ion-button ion-button type="submit" block>Save</ion-button>
+  </form>
+
+</ion-content>

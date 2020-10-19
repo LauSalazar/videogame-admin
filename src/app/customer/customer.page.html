@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="save(form)">
+    <ion-item>
+      <ion-label>Identificacion</ion-label>
+      <ion-input type="text" required [(ngModel)]="customer.identification" name="identification"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" required [(ngModel)]="customer.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-input type="date" [(ngModel)]="customer.birthDate" name="birth_date"></ion-input>
+    </ion-item>
+    <ion-button ion-button type="submit" block>Save</ion-button>
+  </form>
+</ion-content>
